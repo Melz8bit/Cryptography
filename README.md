@@ -1,3 +1,3 @@
 # Cryptography
 
-# Assignments from Cracking Codes with Python
+Assignments from Cracking Codes with Python
