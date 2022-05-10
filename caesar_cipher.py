@@ -14,21 +14,24 @@ key = int(input("What is the key? "))
 
 translated = ''
 for character in user_input:
-    index = CHARACTERS.index(character)
-    
-    new_index = 0
-    if method == 'e':
-        new_index = index + key
-
-        if new_index >= len(CHARACTERS):
-            new_index -= len(CHARACTERS)
-    
-    else:
-        new_index = index - key
-
-        if new_index < 0:
-            new_index += len(CHARACTERS)
+    if character in CHARACTERS:
+        index = CHARACTERS.index(character)
         
+        new_index = 0
+        if method == 'e':
+            new_index = index + key
+
+            if new_index >= len(CHARACTERS):
+                new_index -= len(CHARACTERS)
+        
+        else:
+            new_index = index - key
+
+            if new_index < 0:
+                new_index += len(CHARACTERS)
+    else:
+        translated += character
+            
     translated += CHARACTERS[new_index]
 
 print(translated)
