@@ -1,5 +1,3 @@
-from hashlib import new
-from re import A
 import string
 
 CHARACTERS = string.ascii_letters + string.digits + string.punctuation
